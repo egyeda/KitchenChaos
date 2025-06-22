@@ -8,6 +8,7 @@ public class CuttingCounter : BaseCounter
 	{
 		public float progressNormalized;
 	}
+	//For test commit
 
 
 	[SerializeField] CuttingRecipeSO[] CuttingRecipeSOs;
