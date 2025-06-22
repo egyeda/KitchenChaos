@@ -1,0 +1,20 @@
+Post processing:
+
+A fileok ahol a legtöbb dolgot kell csinálni az a:
+	- Global Volume game object amin vannak pl a tonemapping, color adjustments, bloom, vignette
+	- Assets/Settings/PC_Renderer (itt vannak az ambient occlusion)
+	- Assets/Settings/RPAsset (Itt van az anti aliasing and so on)
+
+Events: 
+Kicsit kell még tanulni a használatról, basically ami nem minden frament kell hivodjon mint az pl hogy tudsze interactolni valamivel az eventbe megy.
+
+
+Scriptable object, ezeket olyanra lehet használni mint golyó stb, fegyvertipusok.
+
+Prefab variantok is hasznosak arra is van példa a projektben.
+
+A visual dolgok és animációk külön scriptbe mennek és általában eventel hívódnak.
+
+Ha nem muszály ne használjunk más accessort mint a private, sok fejfájástól megmenthet.
+
+

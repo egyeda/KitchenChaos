@@ -1,0 +1,6 @@
+Post processing:
+
+A fileok ahol a legtöbb dolgot kell csinálni az a:
+	- Global Volume game object amin vannak pl a tonemapping, color adjustments, bloom, vignette
+	- Assets/Settings/PC_Renderer (itt vannak az ambient occlusion)
+	- Assets/Settings/RPAsset (Itt van az anti aliasing and so on)
