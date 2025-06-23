@@ -8,8 +8,8 @@ public class CuttingCounter : BaseCounter
 	{
 		public float progressNormalized;
 	}
-	//For test commit
 
+	public event EventHandler OnCut;
 
 	[SerializeField] CuttingRecipeSO[] CuttingRecipeSOs;
 	private int cuttingProgress;
@@ -59,6 +59,7 @@ public class CuttingCounter : BaseCounter
 		if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO()))
 		{
 			cuttingProgress++;
+			OnCut?.Invoke(this, EventArgs.Empty);
 			
 			CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSO(GetKitchenObject().GetKitchenObjectSO());
 

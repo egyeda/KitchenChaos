@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1750578444
+  lastShownTimestamp: 1750704356
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1750578444
+  checkedLastUpdateTimestamp: 1750704356
   lastQOTDResponse:
     questionId: 193
     questionText: What will happen on January 19, 2038 at 03:14:07?
@@ -27,26 +27,26 @@ MonoBehaviour:
     answerC: Half-Life 3 release date
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1750578444
+  lastQotdTimestamp: 1750704356
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/ultimateOverview70_6FreeUpdate.png
     topText: Learn how to use 70 Tools and Features! (Unity 6 Updated)
     topLink: ultimateunityoverview
     bottomText: My 10+ Years of C# Knowledge in 1 Course!
     bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1750578444
+  lastDynamicHeaderTimestamp: 1750704356
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1750578444
+  websiteLatestMessageTimestamp: 1750704356
   websiteLatestVideos:
     videos:
+    - youTubeId: iN3Q0RBiWk8
+      title: What do the BEST Programmers do differently?
     - youTubeId: Nv-pG1v_TaM
       title: TOP 10 NEW Systems and Tools JUNE 2025! | Unity Asset Store
     - youTubeId: KrjXYXGdnj8
       title: How to BREAK your Desktop!
     - youTubeId: AD5HtjUun5g
       title: Which Unity Version should you use?
-    - youTubeId: 2UP_g58SDKM
-      title: TOP 10 FREE NEW Assets JUNE 2025!
-  websiteLatestVideosTimestamp: 1750578444
+  websiteLatestVideosTimestamp: 1750704356
