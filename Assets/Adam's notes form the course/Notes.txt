@@ -4,3 +4,22 @@ A fileok ahol a legtöbb dolgot kell csinálni az a:
 	- Global Volume game object amin vannak pl a tonemapping, color adjustments, bloom, vignette
 	- Assets/Settings/PC_Renderer (itt vannak az ambient occlusion)
 	- Assets/Settings/RPAsset (Itt van az anti aliasing and so on)
+
+A player inputok a PlayerInpuActionsban van megoldva, jo cucc onnan lehet inspirálódni. Ezeket majd a game input scriptbe kezeljük 
+és majd a szükséges scriptben használjuk.
+
+Scriptable objectek jó összesítők hogy több game objectet vagy infót összekössünk ami összejár.
+A cuttingRecipeSO-k jó példa arra hogy egyik kitchen objectből egy másik objectet csináljunk.
+
+Base prefaboknak lehet csinálni egy alap prefabot és aztán prefab variablet csinálni belőle.
+
+Az animáció/visual dolgok mindig külön scriptbe kell legyenek, logikával nem vegyíteni. Csinálni külön scriptet 
+
+Naming Convention példák
+
+	- ContainerCounter (ez az alap prefab)
+	- ContainerCounter_Tomato (ez a prefab variant)
+
+Rule of thumb: 
+Minden object vagy game object a maga dolgát végzi, így mindig tudod hol keressed a bugot.
+Mindig használjunk private accessorokat, ha valami operációt kell akkor metóduson keresztül módosítsuk a saját classjából.
