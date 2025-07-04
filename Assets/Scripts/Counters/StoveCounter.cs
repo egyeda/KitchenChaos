@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Data;
 using System.Xml.Serialization;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
@@ -7,7 +9,7 @@ using UnityEngine.InputSystem.Controls;
 
 public class StoveCounter : BaseCounter
 {
-	private enum State
+	public enum State
 	{
 		Idle,
 		Frying,
@@ -15,6 +17,12 @@ public class StoveCounter : BaseCounter
 		Burnt
 	}
 
+
+	public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
+	public class OnStateChangedEventArgs : EventArgs
+	{
+		public State state;
+	}
 
 	[SerializeField] FryingRecipeSO[] fryingRecipeSOs;
 	[SerializeField] BurningRecipeSO[] burningRecipeSOs;
@@ -51,6 +59,7 @@ public class StoveCounter : BaseCounter
 						burningRecipeSO = GetBurningRecipeSO(GetKitchenObject().GetKitchenObjectSO());
 						currentState = State.Fried;
 						burningProgress = 0f;
+						OnStateChanged?.Invoke(this, new OnStateChangedEventArgs{ state = currentState });
 					}
 					break;
 				case State.Fried:
@@ -63,6 +72,7 @@ public class StoveCounter : BaseCounter
 						KitchenObject.SpawnKitchenObject(burningRecipeSO.output, this);
 
 						currentState = State.Burnt;
+						OnStateChanged?.Invoke(this, new OnStateChangedEventArgs{ state = currentState });
 					}
 					break;
 				case State.Burnt:
@@ -86,6 +96,8 @@ public class StoveCounter : BaseCounter
 
 					fryingRecipeSO = GetFryingRecipeSO(GetKitchenObject().GetKitchenObjectSO());
 					currentState = State.Frying;
+					OnStateChanged?.Invoke(this, new OnStateChangedEventArgs{ state = currentState });
+					
 				}
 			}
 			else
@@ -100,6 +112,8 @@ public class StoveCounter : BaseCounter
 			{
 				//Player has no object, give this to him.
 				GetKitchenObject().SetKitchenObjectParent(player);
+				currentState = State.Idle;
+				OnStateChanged?.Invoke(this, new OnStateChangedEventArgs{ state = currentState });
 				fryingProgress = 0f;
 			}
 		}

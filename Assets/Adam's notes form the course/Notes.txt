@@ -23,3 +23,5 @@ Naming Convention példák
 Rule of thumb: 
 Minden object vagy game object a maga dolgát végzi, így mindig tudod hol keressed a bugot.
 Mindig használjunk private accessorokat, ha valami operációt kell akkor metóduson keresztül módosítsuk a saját classjából.
+
+A stove counterre van egy példa a state managementre.
