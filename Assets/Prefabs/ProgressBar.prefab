@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecdbc2ab5876624e9fa69fd0c80eb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cuttingCounter: {fileID: 0}
+  hasProgressGameObject: {fileID: 0}
   progressImage: {fileID: 6995422134358891350}
 --- !u!114 &3445670964496401337
 MonoBehaviour:
