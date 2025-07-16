@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 using UnityEngine;
 
 public class LookAtCamera : MonoBehaviour
@@ -21,14 +22,14 @@ public class LookAtCamera : MonoBehaviour
 				break;
 				
 			case Mode.LookAtInverted:
-				Vector3 dirFromCamera = transform.position - Camera.main.transform.position;
+				UnityEngine.Vector3 dirFromCamera = transform.position - Camera.main.transform.position;
 				transform.LookAt(transform.position + dirFromCamera);
 				break;
 			case Mode.CameraForward:
-				transform.LookAt(Camera.main.transform.position);
+				transform.forward = Camera.main.transform.forward;
 				break;
 			case Mode.CameraForwardInverted:
-				transform.LookAt(-Camera.main.transform.position);
+				transform.forward = -Camera.main.transform.forward;
 				break;
 		}
 	}
