@@ -1,12 +1,17 @@
-Post processing:
+<<<<<<<<<<<<<<<<<<< Post processing >>>>>>>>>>>>>>>>>>>>>
 
 A fileok ahol a legtöbb dolgot kell csinálni az a:
 	- Global Volume game object amin vannak pl a tonemapping, color adjustments, bloom, vignette
 	- Assets/Settings/PC_Renderer (itt vannak az ambient occlusion)
 	- Assets/Settings/RPAsset (Itt van az anti aliasing and so on)
 
+
+<<<<<<<<<<<<<<<<<<< Player inputs >>>>>>>>>>>>>>>>>>>>>
+
 A player inputok a PlayerInpuActionsban van megoldva, jo cucc onnan lehet inspirálódni. Ezeket majd a game input scriptbe kezeljük 
 és majd a szükséges scriptben használjuk.
+
+<<<<<<<<<<<<<<<<<<< Best practice on hierarchy and code >>>>>>>>>>>>>>>>>>>>>
 
 Scriptable objectek jó összesítők hogy több game objectet vagy infót összekössünk ami összejár.
 A cuttingRecipeSO-k jó példa arra hogy egyik kitchen objectből egy másik objectet csináljunk.
@@ -25,3 +30,8 @@ Minden object vagy game object a maga dolgát végzi, így mindig tudod hol kere
 Mindig használjunk private accessorokat, ha valami operációt kell akkor metóduson keresztül módosítsuk a saját classjából.
 
 A stove counterre van egy példa a state managementre.
+
+<<<<<<<<<<<<<<<<<<< Shaders >>>>>>>>>>>>>>>>>>>>>
+A shaderekre nagyon jo pelda a DelivaryArrow, erre van csinálva egy shader graph (MovingVisual), amiben csomó dolgot lehet matatni (itt nem ártana 
+megnézni egy külön tutorialt)
+
