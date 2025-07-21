@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BaseCounter : MonoBehaviour, IKitchenObjectParent
@@ -8,6 +9,8 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
 
 	private KitchenObject kitchenObject;
 
+
+	public static event EventHandler OnObjectPlaced;
 
 
 
@@ -28,6 +31,10 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
 
 	public void SetKitchenObject(KitchenObject kitchenObject)
 	{
+		if (kitchenObject != null) {
+			OnObjectPlaced?.Invoke(this, EventArgs.Empty);
+		}
+
 		this.kitchenObject = kitchenObject;
 	}
 
