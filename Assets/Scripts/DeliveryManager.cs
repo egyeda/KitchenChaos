@@ -7,6 +7,9 @@ public class DeliveryManager : MonoBehaviour
 	public event EventHandler OnRecipeSpawned;
 	public event EventHandler OnRecipeCompleted;
 
+	public event EventHandler OnRecipeSuccess;
+	public event EventHandler OnRecipeFail;
+
 
 
 	public static DeliveryManager Instance
@@ -84,12 +87,13 @@ public class DeliveryManager : MonoBehaviour
 				{
 					waitingRecipeSOList.RemoveAt(waitingRecipeSOIndex);
 					OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
+					OnRecipeSuccess?.Invoke(this, EventArgs.Empty);
 					return;
 				}
 			}
 		}
 
-		Debug.Log("no matches found");
+		OnRecipeFail?.Invoke(this, EventArgs.Empty);
 	}
 
 	public List<RecipeSO> GetWaitingRecipeSOList()
