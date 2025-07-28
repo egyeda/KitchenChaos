@@ -22,12 +22,29 @@ public class GameManager : MonoBehaviour
 	private float countdownToStartTimer = 3f;
 	private float gamePlayingTimer;
 	private float gamePlayingTimerMax = 30f;
+	private bool isGamePaused = false;
 
 
 	private void Awake()
 	{
 		state = State.WaitingToStart;
 		Instance = this;
+	}
+
+	private void Start()
+	{
+		GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
+	}
+
+	private void GameInput_OnPauseAction(object sender, EventArgs e)
+	{
+		PauseGame();
+	}
+
+	private void PauseGame()
+	{
+		isGamePaused = !isGamePaused;
+		Time.timeScale = isGamePaused ? 0f : 1f;
 	}
 
 	private void Update()
