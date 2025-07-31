@@ -11,13 +11,15 @@ public class MainMenuUI : MonoBehaviour
 	private void Awake()
 	{
 		//Instead of using separate method it can be used by a lambda experssion.
-        playButton.onClick.AddListener(() =>
+		playButton.onClick.AddListener(() =>
 		{
 			Loader.Load(Loader.Scene.GameScene);
 		});
 
 		//Separate method for more complex functionalities.
-        quitButton.onClick.AddListener(QuitButton_OnClick);
+		quitButton.onClick.AddListener(QuitButton_OnClick);
+
+		Time.timeScale = 1f;
 	}
 
 	private void QuitButton_OnClick()

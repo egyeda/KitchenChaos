@@ -47,6 +47,10 @@ public class GameManager : MonoBehaviour
 		PauseGame();
 	}
 
+	public void TogglePause()
+	{
+		PauseGame();
+	}
 	private void PauseGame()
 	{
 		isGamePaused = !isGamePaused;
@@ -96,7 +100,6 @@ public class GameManager : MonoBehaviour
 			case State.GameOver:
 				break;
 		}
-		Debug.Log(state);
 	}
 
 	public bool IsGamePlaying()
